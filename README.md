@@ -1,4 +1,7 @@
-# Project XYZ
+<a id="top"></a>
+
+# US Accidents (2-16 - 2023)
+## A Countrywide Traffic Accident Dataset
 
 **Project XYZ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
 
@@ -74,6 +77,16 @@
 
 ## Credits 
 
+Data sourced from Kaggle https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents 
+
+Please note the following two papers:
+
+Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, and Rajiv Ramnath. “A Countrywide Traffic Accident Dataset.”, 2019.
+
+Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, Radu Teodorescu, and Rajiv Ramnath. "Accident Risk Prediction based on Heterogeneous Sparse Data: New Dataset and Insights." In proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, ACM, 2019.
+
+Provenance: “This dataset was collected in real-time using multiple Traffic APIs. It contains accident data collected from February 2016 to March 2023 for the Contiguous United States. This dataset is being distributed solely for research purposes under the Creative Commons Attribution-Noncommercial-ShareAlike license (CC BY-NC-SA 4.0).”
+
 * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
 
@@ -92,3 +105,5 @@
 
 ## Acknowledgements (optional)
 * Thank the people who provided support through this project.
+
+[🔝 Back to Top](#top)

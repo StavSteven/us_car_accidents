@@ -17,7 +17,8 @@
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+* List here your project hypothesis(es) and how you envision validating it (them)
+
 
 ## Project Plan
 * Outline the high-level steps taken for the analysis.
@@ -33,6 +34,17 @@
 * Did the data limit you, and did you use an alternative approach to meet these challenges?
 * How did you use generative AI tools to help with ideation, design thinking and code optimisation?
 
+#### The machine learning model 
+
+* Why a decision tree classifier for the machine learning model? The target variable to be predicted is one of four outputs and therefore a classification model is appropriate. A decision tree was chosen because it is easy to interpret the outputs and it can handle both numerical and categorical features. A decision tree is suitable for identifying the most influential variables in predicting adoption outcomes.
+
+* The data was encoded, ready for the ML model using the straightforward OneHotEncoder.
+
+* The data was scaled using the StandardScaler to ensure that all features were on a comparable scale, which prevents features with larger numerical ranges from dominating the training process.
+
+* This is an initial model, with further testing a more tuned model or different classifier will provide more accurate predictions. 
+
+
 ## Ethical considerations
 * Were there any data privacy, bias or fairness issues with the data?
 * How did you overcome any legal or societal issues?
@@ -44,6 +56,28 @@
 * Explain how the dashboard was designed to communicate complex data insights to different audiences. 
 
 ## Conclusions
+
+
+
+
+#### Machine Learning Model
+
+Predictive modelling using a Decision Tree Classifier shows that the most important features are: Start location, temperature, year, humidity, day, time, wind and traffic crossing.
+
+The model could be improved with further adjusting hyperparameters. Perhaps a different type of Classifier might improve the classification scores. 
+
+Given a set of conditions the model can predict the severity of a traffic accident (provided no unforeseen variables are used).
+
+Overall accuracy: ~0.67
+Not too good but accuracy is misleading because the classes of severity are highly imbalanced.
+
+Classification Report:
+- Class 2 dominates, so the model mostly predicts class 2.
+- Classes 1, 3, 4 are severely under-predicted → recall is very low.
+- Macro F1 (~0.30) shows that minority classes are failing.
+
+Confusion matrix:
+- Most misclassified samples of class 3 and 4 are predicted as class 2.
 
 
 

@@ -42,7 +42,7 @@
 
 * The data was scaled using the StandardScaler to ensure that all features were on a comparable scale, which prevents features with larger numerical ranges from dominating the training process.
 
-This is an initial model, with further testing a more tuned model or different classifier will provide more accurate predictions. 
+* This is an initial model, with further testing a more tuned model or different classifier will provide more accurate predictions. 
 
 
 ## Ethical considerations
@@ -76,7 +76,7 @@ Classification Report:
 - Classes 1, 3, 4 are severely under-predicted → recall is very low.
 - Macro F1 (~0.30) shows that minority classes are failing.
 
-Confusion matri:
+Confusion matrix:
 - Most misclassified samples of class 3 and 4 are predicted as class 2.
 
 

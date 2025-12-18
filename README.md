@@ -43,7 +43,14 @@ Are accidents happening more at night? Are accidents around crossings more frequ
 
 ## Hypothesis and how to validate?
 
--   List here your project hypothesis(es) and how you envision validating it (them)
+**Hypothesis 1**: More crashes, of a higher severity take place at night, than they do during the day regardless of the weather.  
+H₀ - There will be no relationship between severity of crashes and time of day  
+H₁ - The highest proportion of severe will be at night proving there is a relationship between time of day and intensity of crash
+
+_This will be tested using:_ A chi-squared test to understand the statistical analysis followed by plotting the data.
+
+**Result:**
+We reject the Null Hypothesis. There is a significant relationship between time of day and severity. The chi-squared test supports this return a pval of 0.0001210779, well below the 0.05 threshold. The visual plots also support this, whilst there are more crashes during the day and the majority of accidents are given a severity rating of two the largest change in percentage between day and night is category 4 crashes increasing by 106%.
 
 ## Project Plan
 

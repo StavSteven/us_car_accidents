@@ -201,7 +201,11 @@ The final phase of the project focused on data visualisation using a multi-libra
 
 ### Michael's
 
+<img src ="images/michael_dashboard.png" alt="Michael Dashboard" style="width: 400; height: auto">
+
+
 US Car Accidents
+
 The single-page dashboard integrates multiple interactive and analytical components:
 
 Filters and Controls
@@ -240,6 +244,8 @@ Checkbox Filters: Simple UI for narrowing down data by time period.
 Weather Condition Table: Uses plain language and colour-coded cells to highlight trends.
 
 ### Hidaia's
+
+<img src ="images/hidaia_dashboard.png" alt="Hidaia dashboard" style="width: 400; height: auto">
 
 ### Dashboard Pages and Content
 
@@ -373,7 +379,9 @@ Provenance: “This dataset was collected in real-time using multiple Traffic AP
 ## Acknowledgements
 
 -   Beth, Hidaia, Michael and Steven for creating this project
--   Code institute course facilitator Emmma Lamont
+-   Code institute course facilitator Emma Lamont
 -   Code institute tutors and technical coaches
 
 [🔝 Back to Top](#project-overview)
+
+<img src ="images/traffic_wordcloud.png" alt="traffic wordcloud" style="width: auto; height: 200">

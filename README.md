@@ -34,6 +34,11 @@
 * Did the data limit you, and did you use an alternative approach to meet these challenges?
 * How did you use generative AI tools to help with ideation, design thinking and code optimisation?
 
+
+* Utilise CRISP-DM: Cross Industry Standard Process for Data Mining 
+* Utilise the Agile approach: small iterations with constant evaluation. For example: simplifying the number of weather conditions and then working with a new version of the data. 
+
+
 #### The machine learning model 
 
 * Why a decision tree classifier for the machine learning model? The target variable to be predicted is one of four outputs and therefore a classification model is appropriate. A decision tree was chosen because it is easy to interpret the outputs and it can handle both numerical and categorical features. A decision tree is suitable for identifying the most influential variables in predicting adoption outcomes.

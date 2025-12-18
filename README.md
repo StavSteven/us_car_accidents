@@ -305,7 +305,19 @@ This approach ensures accessibility for non-technical users while still supporti
 |                      | `sklearn.pipeline`          | Building reproducible end-to-end ML workflows.              |
 |                      | `sklearn.metrics`           | Performance metrics (Accuracy, F1-Score, Confusion Matrix). |
 
-## Conclusion and discussion
+# Conclusion and discussion
+
+This analysis of US traffic accidents provides a comprehensive overview of the factors that contribute to road incidents. By having data from all across America, environmental conditions, several significant patterns have been identified:
+
+-   Seasonal Trends: The data highlights specific high-risk windows, particularly during morning and evening rush hours. Furthermore, seasonal fluctuations suggest a rise in incidents during the winter months, due to reduced daylight and adverse weather.
+
+-   Environmental Impact: Weather conditions causing reduced visibility show a clear correlation with increased accident severity. This underscores the critical need for improved infrastructure and real-time driver warnings during inclement weather.
+
+-   Geographic Hotspots: Certain states and cities have disproportionately high accident rates. The findings suggest that urban density and the complexity of road networks in these regions are primary contributors to the frequency of collisions.
+
+-   Severity Factors: Through the examination of road features, such as junctions and traffic signals, it is evident that specific physical layouts are more prone to serious accidents, providing a roadmap for potential urban planning improvements.
+
+In summary, while driver behaviour is a key variable, environmental and structural factors play a fundamental role in road safety. This project serves as a foundation for data-driven strategies aimed at reducing traffic fatalities and improving emergency response efficiency across the United States.
 
 #### Machine Learning Model
 
@@ -330,14 +342,14 @@ Confusion matrix:
 
 ## Limitations in the data
 
+-   There was a lack of distribution amongst severity of the crashes, over 80% had a rating of 2
+-   We were unable to plot a heatmap due to the fact that all entries are crashes so we had to switch our focus to what causes the severity of each crash.
+
 ## Unfixed Bugs
 
 There were no bugs encountered throughout this project
 
 ## Development Roadmap
-
--   What challenges did you face, and what strategies were used to overcome these challenges?
--   What new skills or tools do you plan to learn next based on your project experience?
 
 With the Decision Tree ML model different hyperparameters have been tested. Next it could prove beneficial to try a Random Forest Classifier to improve the accuracy score. The severity target variable is imbalanced which is making it hard for the model to predict accurately for targets other than a severity of 2.
 To delve deeper into the data the three different twilight columns could be investigated to see if the reducing light levels has a noticeable effect on traffic accidents.
@@ -363,6 +375,8 @@ Provenance: “This dataset was collected in real-time using multiple Traffic AP
 
 ## Acknowledgements (optional)
 
--   Thank the people who provided support through this project.
+-   Beth, Hidaia, Michael and Steven for creating this project
+-   Code institute course facilitator Emmma Lamont
+-   Code institute tutors and technical coaches
 
-[🔝 Back to Top](#top)
+[🔝 Back to Top](#project-overview)

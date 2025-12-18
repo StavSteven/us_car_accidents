@@ -6,14 +6,30 @@
 
 This project explores a dataset of traffic accidents to identify the primary factors contributing to crash severity. By analysing road infrastructure, and environmental conditions, we aim to uncover insights into why certain accidents result in higher severity levels (1–4). In doing so we can predict which conditions result in more severe crashes and what can be done to improve road safety.
 
-[README](/https://github.com/StavSteven/us_car_accidents/blob/main/README.md)
-[Project board](https://github.com/users/StavSteven/projects/12)
-[Raw data](https://github.com/StavSteven/us_car_accidents/tree/main/data/raw_data) | [Clean data](https://github.com/StavSteven/us_car_accidents/tree/main/data/cleaned_data)
-[ETL Notebook]()
-Visualisation & Statistical analysis Notebook
-Machine Learning Notebook
-Power BI dashboard
-Conclusion and discussion
+-   [README](/https://github.com/StavSteven/us_car_accidents/blob/main/README.md)
+-   [Project board](https://github.com/users/StavSteven/projects/12)
+-   [Raw data](https://github.com/StavSteven/us_car_accidents/tree/main/data/raw_data) | [Clean data](https://github.com/StavSteven/us_car_accidents/tree/main/data/cleaned_data)
+-   [ETL Notebook](/jupyter_notebooks/1_etl_us_accidents.ipynb)
+-   [Visualisation & Statistical analysis Notebook](/jupyter_notebooks/2_plotting_us_accidents.ipynb)
+-   [Machine Learning Notebook](/jupyter_notebooks/machine_learning.ipynb)
+-   [Power BI dashboard](/dashboards/)
+-   [Conclusion and discussion]()
+
+1. [Project Overview](#project-overview)
+2. [Dataset Content](#dataset-content)
+3. [Business Requirements](#business-requirements)
+4. [Hypothesis Testing and Validation](#hypothesis-testing-and-validation)
+5. [Rationale to map business requirements](#rationale-to-map-business-requirements)
+6. [Project plan](#project-plan)
+7. [Data Analysis Methods Used](#data-analysis-methods-used)
+8. [Development Roadmap](#development-roadmap)
+9. [Deployment](#deployment)
+10. [Main Data Analysis Libraries](#main-data-analysis-libraries)
+11. [Conclusion and discussion](#conclusion-and-discussion)
+12. [Limitations in the data](#limitations-in-the-data)
+13. [Overall summary](#overall-summary)
+14. [Credits](#credits)
+15. [Acknowledgements](#acknowledgements)
 
 ## Dataset Content
 
@@ -48,7 +64,7 @@ Conclusion and discussion
 As a local council in America we want to study crash data across the country to determine which road features (junctions, crossings, or signals) are most frequently associated with high-severity crashes. As well as studying the time of day, or year when crashes are taking place to see whether we can put in any preventative measures.
 Are accidents happening more at night? Are accidents around crossings more frequent than those not near crossings? Does bad weather cause the increase in number of severity of crashes that we think it does?
 
-## Hypothesis and how to validate?
+## Hypothesis testing and validation?
 
 **Hypothesis 1**: More crashes, of a higher severity take place at night, than they do during the day regardless of the weather.  
 H₀ - There will be no relationship between severity of crashes and time of day  
@@ -59,9 +75,7 @@ _This will be tested using:_ A chi-squared test to understand the statistical an
 **Result:**
 We reject the Null Hypothesis. There is a significant relationship between time of day and severity. The chi-squared test supports this return a pval of 0.0001210779, well below the 0.05 threshold. The visual plots also support this, whilst there are more crashes during the day and the majority of accidents are given a severity rating of two the largest change in percentage between day and night is category 4 crashes increasing by 106%.
 
-## Hypothesis 2\*\*
-
-**Accident severity changes depending on whether an accident occurs at a junction.**
+**Hypothesis 2:** Accident severity changes depending on whether an accident occurs at a junction.
 
 -   **Null Hypothesis (H0):**  
     Accident severity does not differ between junction and non-junction locations.

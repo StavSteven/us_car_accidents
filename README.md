@@ -330,14 +330,14 @@ Confusion matrix:
 
 ## Limitations in the data
 
+-   There was a lack of distribution amongst severity of the crashes, over 80% had a rating of 2
+-   We were unable to plot a heatmap due to the fact that all entries are crashes so we had to switch our focus to what causes the severity of each crash.
+
 ## Unfixed Bugs
 
 There were no bugs encountered throughout this project
 
 ## Development Roadmap
-
--   What challenges did you face, and what strategies were used to overcome these challenges?
--   What new skills or tools do you plan to learn next based on your project experience?
 
 With the Decision Tree ML model different hyperparameters have been tested. Next it could prove beneficial to try a Random Forest Classifier to improve the accuracy score. The severity target variable is imbalanced which is making it hard for the model to predict accurately for targets other than a severity of 2.
 To delve deeper into the data the three different twilight columns could be investigated to see if the reducing light levels has a noticeable effect on traffic accidents.

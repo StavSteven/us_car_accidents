@@ -370,10 +370,7 @@ Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, Radu Teo
 
 Provenance: “This dataset was collected in real-time using multiple Traffic APIs. It contains accident data collected from February 2016 to March 2023 for the Contiguous United States. This dataset is being distributed solely for research purposes under the Creative Commons Attribution-Noncommercial-ShareAlike license (CC BY-NC-SA 4.0).”
 
--   In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
--   You can break the credits section up into Content and Media, depending on what you have included in your project.
-
-## Acknowledgements (optional)
+## Acknowledgements
 
 -   Beth, Hidaia, Michael and Steven for creating this project
 -   Code institute course facilitator Emmma Lamont

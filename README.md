@@ -2,11 +2,18 @@
 
 # US Accidents (2016 - 2023)
 
-## A Countrywide Traffic Accident Dataset
+# ![Readme header](/images/readme_header.avif)
 
 This project explores a dataset of traffic accidents to identify the primary factors contributing to crash severity. By analysing road infrastructure, and environmental conditions, we aim to uncover insights into why certain accidents result in higher severity levels (1–4). In doing so we can predict which conditions result in more severe crashes and what can be done to improve road safety.
 
-# ![Readme header](/images/readme_header.avif)
+[README](/https://github.com/StavSteven/us_car_accidents/blob/main/README.md)
+[Project board](https://github.com/users/StavSteven/projects/12)
+[Raw data](https://github.com/StavSteven/us_car_accidents/tree/main/data/raw_data) | [Clean data](https://github.com/StavSteven/us_car_accidents/tree/main/data/cleaned_data)
+[ETL Notebook]()
+Visualisation & Statistical analysis Notebook
+Machine Learning Notebook
+Power BI dashboard
+Conclusion and discussion
 
 ## Dataset Content
 
@@ -226,18 +233,7 @@ To delve deeper into the data the three different twilight columns could be inve
 
 ## Deployment
 
-### Heroku
-
--   The App live link is: https://YOUR_APP_NAME.herokuapp.com/
--   Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
--   The project was deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+[Power BI dashboards can be found here](/dashboards/)
 
 ## Main Data Analysis Libraries
 

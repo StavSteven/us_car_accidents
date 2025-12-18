@@ -34,6 +34,11 @@
 * Did the data limit you, and did you use an alternative approach to meet these challenges?
 * How did you use generative AI tools to help with ideation, design thinking and code optimisation?
 
+
+* Utilise CRISP-DM: Cross Industry Standard Process for Data Mining 
+* Utilise the Agile approach: small iterations with constant evaluation. For example: simplifying the number of weather conditions and then working with a new version of the data. 
+
+
 #### The machine learning model 
 
 * Why a decision tree classifier for the machine learning model? The target variable to be predicted is one of four outputs and therefore a classification model is appropriate. A decision tree was chosen because it is easy to interpret the outputs and it can handle both numerical and categorical features. A decision tree is suitable for identifying the most influential variables in predicting adoption outcomes.
@@ -89,6 +94,10 @@ Confusion matrix:
 ## Development Roadmap
 * What challenges did you face, and what strategies were used to overcome these challenges?
 * What new skills or tools do you plan to learn next based on your project experience? 
+
+With the Decision Tree ML model different hyperparameters have been tested. Next it could prove beneficial to try a Random Forest Classifier to improve the accuracy score. The severity target variable is imbalanced which is making it hard for the model to predict accurately for targets other than a severity of 2. 
+To delve deeper into the data the three different twilight columns could be investigated to see if the reducing light levels has a noticeable effect on traffic accidents. 
+
 
 ## Deployment
 ### Heroku

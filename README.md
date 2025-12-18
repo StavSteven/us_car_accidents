@@ -145,6 +145,10 @@ This supports the alternative hypothesis (H1) and suggests that junctions play a
     -   Traffic volume
 -   Applying statistical tests or machine learning models could strengthen the findings in future work.
 
+**Hypothesis 3:** The Midwest shows moderate accident severity compared to those in the coastal regions
+
+![Map to support hypothesis](/images/michael_dashboard.png)
+
 ## Project Plan
 
 High-Level Steps,

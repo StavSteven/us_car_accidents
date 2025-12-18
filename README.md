@@ -119,9 +119,19 @@ This supports the alternative hypothesis (H1) and suggests that junctions play a
 
 ## Project Plan
 
--   Outline the high-level steps taken for the analysis.
--   How was the data managed throughout the collection, processing, analysis and interpretation steps?
--   Why did you choose the research methodologies you used?
+### Steps taken to analyse the data:
+
+Data inspection: We loaded the dataset and performed an initial df.info() to see the properties of the data, column names, dtypes and identify missing values. df.describe()allowed us to check for any outliers and check the distribution of the data.
+
+Feature Engineering & Cleaning: We removed the columns we deemed unusable or not required to tell our story. We also transformed some of the columns, extracting day, month and year from already existing columns to give us extra data to use when visualising it. We also mapped and categorised weather into a smaller number of groups for better statistical analysis. When dealing with nulls we looked at the distribution of data within that field to decide whether it was best to fill the value with the mean (normal distribution) or median (non-normal distribution). There were roughly 200 categorical nulls so we opted to remove those records altogether as 4800 was enough data to carry out the project.
+
+Exploratory Data Analysis (EDA): We used Seaborn, Matplotlib and Plotly to create visualisations that allowed us to identify correlations between environmental factors, date time and accident frequency. Due to the nature of the nature we were also able to use the latitude and longitude to plot where the accident took place.
+
+Predictive Modelling: We were able to build a machine learning pipeline using a decision tree classifier to determine the "feature importance" of various factors when it came to predicting accident severity
+
+### Managing the data
+
+The original dataset had ~7.7million records, not only was this more than we needed it exceeded Githubs limit. It was decided that we would take a random sample of 5000 records to work with. For the machine learning parts of our project all numerical data was scaled and categoricals encoded to maintain the integrity of the data but allow us to plot it all. We tried to use a variety of methods to visualise the data, using a number of different libraries and different charts on our dashboards and within our notebooks.
 
 ## The rationale to map the business requirements to the Data Visualisations
 

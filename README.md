@@ -52,6 +52,64 @@ _This will be tested using:_ A chi-squared test to understand the statistical an
 **Result:**
 We reject the Null Hypothesis. There is a significant relationship between time of day and severity. The chi-squared test supports this return a pval of 0.0001210779, well below the 0.05 threshold. The visual plots also support this, whilst there are more crashes during the day and the majority of accidents are given a severity rating of two the largest change in percentage between day and night is category 4 crashes increasing by 106%.
 
+## Hypothesis 2**
+**Accident severity changes depending on whether an accident occurs at a junction.**
+
+- **Null Hypothesis (H0):**  
+  Accident severity does not differ between junction and non-junction locations.
+
+- **Alternative Hypothesis (H1):**  
+  Accident severity differs between junction and non-junction locations.
+
+---
+
+## Data Used
+- Dataset: `us_accidents_cleaned.csv`
+- Key variables:
+  - `severity`
+  - `junction` (True / False)
+
+The data was pre-cleaned as part of the shared ETL process.
+
+---
+
+## Methodology
+1. Loaded the cleaned dataset in a Jupyter Notebook.
+2. Grouped accident records by junction status.
+3. Calculated average accident severity for:
+   - Junction locations
+   - Non-junction locations
+4. Created visualizations to compare severity levels.
+5. Interpreted the visual results to evaluate the hypothesis.
+
+---
+
+## Visualization
+Bar charts were used to compare the **average accident severity** between junction and non-junction locations.  
+These visualizations helped identify patterns and differences without applying complex statistical models.
+
+---
+
+## Findings
+- Accidents occurring at junctions show a **different average severity** compared to non-junction locations.
+- The visual comparison suggests that **junction presence is associated with changes in accident severity**.
+
+---
+
+## Conclusion
+Based on the exploratory analysis and visual evidence, accident severity appears to vary depending on whether an accident occurs at a junction.  
+This supports the alternative hypothesis (H1) and suggests that junctions play an important role in accident risk and outcomes.
+
+---
+
+## Recommendation
+- Junction areas should receive **additional safety measures**, such as improved signage and traffic control.
+- Further analysis could include:
+  - Weather conditions
+  - Time of day
+  - Traffic volume
+- Applying statistical tests or machine learning models could strengthen the findings in future work.
+
 ## Project Plan
 
 -   Outline the high-level steps taken for the analysis.
@@ -73,8 +131,6 @@ We reject the Null Hypothesis. There is a significant relationship between time 
 
 #### The machine learning model
 
-#### The machine learning model
-
 -   Why a decision tree classifier for the machine learning model? The target variable to be predicted is one of four outputs and therefore a classification model is appropriate. A decision tree was chosen because it is easy to interpret the outputs and it can handle both numerical and categorical features. A decision tree is suitable for identifying the most influential variables in predicting adoption outcomes.
 
 -   The data was encoded, ready for the ML model using the straightforward OneHotEncoder.
@@ -85,8 +141,7 @@ We reject the Null Hypothesis. There is a significant relationship between time 
 
 ## Ethical considerations
 
--   Were there any data privacy, bias or fairness issues with the data?
--   How did you overcome any legal or societal issues?
+There were no ethical considerations required. All the data in this dataset was anonymised, no personal details have been included.
 
 ## Dashboard Design
 
@@ -120,9 +175,7 @@ Confusion matrix:
 
 ## Unfixed Bugs
 
--   Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
--   Did you recognise gaps in your knowledge, and how did you address them?
--   If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+There were no bugs encountered throughout this project
 
 ## Development Roadmap
 

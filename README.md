@@ -2,11 +2,41 @@
 
 # US Accidents (2016 - 2023)
 
-## A Countrywide Traffic Accident Dataset
+# ![Readme header](/images/readme_header.avif)
+
+## Project overview
 
 This project explores a dataset of traffic accidents to identify the primary factors contributing to crash severity. By analysing road infrastructure, and environmental conditions, we aim to uncover insights into why certain accidents result in higher severity levels (1–4). In doing so we can predict which conditions result in more severe crashes and what can be done to improve road safety.
 
-# ![Readme header](/images/readme_header.avif)
+## Project bookmarks:
+
+-   [README](/https://github.com/StavSteven/us_car_accidents/blob/main/README.md)
+-   [Project board](https://github.com/users/StavSteven/projects/12)
+-   [Raw data](https://github.com/StavSteven/us_car_accidents/tree/main/data/raw_data) | [Clean data](https://github.com/StavSteven/us_car_accidents/tree/main/data/cleaned_data)
+-   [ETL Notebook](/jupyter_notebooks/1_etl_us_accidents.ipynb)
+-   [Visualisation & Statistical analysis Notebook](/jupyter_notebooks/2_plotting_us_accidents.ipynb)
+-   [Machine Learning Notebook](/jupyter_notebooks/machine_learning.ipynb)
+-   [Power BI dashboard](/dashboards/)
+-   [Conclusion and discussion](#conclusion-and-discussion)
+
+## Contents:
+
+1. [Project Overview](#project-overview)
+2. [Dataset Content](#dataset-content)
+3. [Business Requirements](#business-requirements)
+4. [Hypothesis Testing and Validation](#hypothesis-testing-and-validation)
+5. [Project plan](#project-plan)
+6. [Rationale to map business requirements](#rationale-to-map-the-business-requirements)
+7. [Data Analysis Methods Used](#analysis-techniques-used)
+8. [Deployment](#deployment)
+9. [Dashboard design](#dashboard-design)
+10. [Main Data Analysis Libraries](#main-data-analysis-libraries)
+11. [Conclusion and discussion](#conclusion-and-discussion)
+12. [Limitations in the data](#limitations-in-the-data)
+13. [Unfixed bugs](#unfixed-bugs)
+14. [Development Roadmap](#development-roadmap)
+15. [Credits](#credits)
+16. [Acknowledgements](#acknowledgements)
 
 ## Dataset Content
 
@@ -41,7 +71,7 @@ This project explores a dataset of traffic accidents to identify the primary fac
 As a local council in America we want to study crash data across the country to determine which road features (junctions, crossings, or signals) are most frequently associated with high-severity crashes. As well as studying the time of day, or year when crashes are taking place to see whether we can put in any preventative measures.
 Are accidents happening more at night? Are accidents around crossings more frequent than those not near crossings? Does bad weather cause the increase in number of severity of crashes that we think it does?
 
-## Hypothesis and how to validate?
+## Hypothesis testing and validation?
 
 **Hypothesis 1**: More crashes, of a higher severity take place at night, than they do during the day regardless of the weather.  
 H₀ - There will be no relationship between severity of crashes and time of day  
@@ -52,84 +82,121 @@ _This will be tested using:_ A chi-squared test to understand the statistical an
 **Result:**
 We reject the Null Hypothesis. There is a significant relationship between time of day and severity. The chi-squared test supports this return a pval of 0.0001210779, well below the 0.05 threshold. The visual plots also support this, whilst there are more crashes during the day and the majority of accidents are given a severity rating of two the largest change in percentage between day and night is category 4 crashes increasing by 106%.
 
-## Hypothesis 2**
-**Accident severity changes depending on whether an accident occurs at a junction.**
+**Hypothesis 2:** Accident severity changes depending on whether an accident occurs at a junction.
 
-- **Null Hypothesis (H0):**  
-  Accident severity does not differ between junction and non-junction locations.
+-   **Null Hypothesis (H0):**  
+    Accident severity does not differ between junction and non-junction locations.
 
-- **Alternative Hypothesis (H1):**  
-  Accident severity differs between junction and non-junction locations.
+-   **Alternative Hypothesis (H1):**  
+    Accident severity differs between junction and non-junction locations.
 
 ---
 
-## Data Used
-- Dataset: `us_accidents_cleaned.csv`
-- Key variables:
-  - `severity`
-  - `junction` (True / False)
+### Data Used
+
+-   Dataset: `us_accidents_cleaned.csv`
+-   Key variables:
+    -   `severity`
+    -   `junction` (True / False)
 
 The data was pre-cleaned as part of the shared ETL process.
 
 ---
 
-## Methodology
+### Methodology
+
 1. Loaded the cleaned dataset in a Jupyter Notebook.
 2. Grouped accident records by junction status.
 3. Calculated average accident severity for:
-   - Junction locations
-   - Non-junction locations
+    - Junction locations
+    - Non-junction locations
 4. Created visualizations to compare severity levels.
 5. Interpreted the visual results to evaluate the hypothesis.
 
 ---
 
-## Visualization
+### Visualization
+
 Bar charts were used to compare the **average accident severity** between junction and non-junction locations.  
 These visualizations helped identify patterns and differences without applying complex statistical models.
 
 ---
 
-## Findings
-- Accidents occurring at junctions show a **different average severity** compared to non-junction locations.
-- The visual comparison suggests that **junction presence is associated with changes in accident severity**.
+### Findings
+
+-   Accidents occurring at junctions show a **different average severity** compared to non-junction locations.
+-   The visual comparison suggests that **junction presence is associated with changes in accident severity**.
 
 ---
 
-## Conclusion
+### Conclusion
+
 Based on the exploratory analysis and visual evidence, accident severity appears to vary depending on whether an accident occurs at a junction.  
 This supports the alternative hypothesis (H1) and suggests that junctions play an important role in accident risk and outcomes.
 
 ---
 
 ## Recommendation
-- Junction areas should receive **additional safety measures**, such as improved signage and traffic control.
-- Further analysis could include:
-  - Weather conditions
-  - Time of day
-  - Traffic volume
-- Applying statistical tests or machine learning models could strengthen the findings in future work.
+
+-   Junction areas should receive **additional safety measures**, such as improved signage and traffic control.
+-   Further analysis could include:
+    -   Weather conditions
+    -   Time of day
+    -   Traffic volume
+-   Applying statistical tests or machine learning models could strengthen the findings in future work.
 
 ## Project Plan
 
--   Outline the high-level steps taken for the analysis.
--   How was the data managed throughout the collection, processing, analysis and interpretation steps?
--   Why did you choose the research methodologies you used?
+High-Level Steps,
+The dataset was collected from Kaggle and reviewed to understand its structure and variables.,
+Data cleaning and preparation were performed, including handling missing values and creating day and night categories.
+Exploratory Data Analysis (EDA) was conducted to identify patterns in accident severity.,
+Hypotheses were tested using statistical methods (chi-squared test).,
+Results were interpreted to generate insights and recommendations.,
 
-## The rationale to map the business requirements to the Data Visualisations
+Data Management,
+Data was sourced from Kaggle and managed in a structured manner throughout the project.,
+Cleaning and processing ensured data consistency and accuracy.,
+Data was grouped and analysed based on key variables such as time of day and junction presence.,
+Visualisations were used to support interpretation and present findings clearly.,
 
--   List your business requirements and a rationale to map them to the Data Visualisations
+Research Methodologies,
+Exploratory Data Analysis (EDA) was used to understand patterns in the data.,
+Statistical analysis (chi-squared test) was applied to validate the hypotheses.,
+Data visualisation was performed using Power BI to clearly communicate insights.
+
+## Rationale to map the business requirements
+
+### Project Methodology and Execution
+
+The analysis followed a the best practice that we have learnt throughout the course. By examining the dataset of over 4,800 US traffic accidents, the initial stage focused on understanding the distribution of crash severity and identifying critical environmental and infrastructure variables. Data management was central to the process; raw data was cleaned and transformed using Pandas to ensure that temporal features—such as peak hours and seasonal months—were accurately extracted. Categorical variables and boolean flags for road features were encoded to facilitate both statistical correlation and machine learning compatibility, ensuring a high level of data integrity from collection through to interpretation.
+
+The research methodology was designed to provide a multi-dimensional view of road safety. Quantitative analysis was employed to pinpoint how fluctuations in visibility, precipitation, and temperature correlate with accident frequency. This was complemented by a comparative infrastructure study, which isolated the impact of junctions and traffic signals on the resulting severity of a crash. To provide actionable insights for stakeholders, the project utilised supervised machine learning—specifically Decision Tree Classifiers—to rank feature importance. This "white-box" approach was chosen to ensure the findings remained transparent and interpretable for local councils and urban planners. Finally, geospatial mapping was integrated into the workflow to identify physical "black spots," transforming tabular data into a visual narrative that highlights high-risk locations across the United States.
+
+To ensure the analysis provided actionable value, the following requirements were established to map data insights to real-world local council applications:
+
+-   **Infrastructure Safety:** Identifying high-risk road features to prioritised engineering audits.
+-   **Environmental Policy:** Determining visibility and precipitation thresholds for dynamic speed limit warnings.
+
+### Data Visualisation Strategy
+
+The project utilised multiple visualisation strategies:
+
+1. **Statistical (Seaborn/Matplotlib):** Used to identify correlations between environmental factors and crash severity.
+2. **Interactive (Plotly and Power BI dashboards):** Implemented to allow stakeholders to explore geographic "black spots" across the United States.
+3. **Machine Learning:** We were able to create a model which was able to judge the severity of potential crashes based on weather conditions and road infrastructure.
+4. **Textual (WordCloud):** Employed to analyse accident descriptions for recurring human factors or situational themes.
 
 ## Analysis techniques used
 
 -   List the data analysis methods used and explain limitations or alternative approaches.
--   How didand did you use an alternative approach to meet these challenges?
+-   How did you use an alternative approach to meet these challenges?
 -   How did you use generative AI tools to help with ideation, design thinking and code optimisation?
 
 *   Utilise CRISP-DM: Cross Industry Standard Process for Data Mining
 *   Utilise the Agile approach: small iterations with constant evaluation. For example: simplifying the number of weather conditions and then working with a new version of the data.
 
-#### The machine learning model
+### The machine learning model
 
 -   Why a decision tree classifier for the machine learning model? The target variable to be predicted is one of four outputs and therefore a classification model is appropriate. A decision tree was chosen because it is easy to interpret the outputs and it can handle both numerical and categorical features. A decision tree is suitable for identifying the most influential variables in predicting adoption outcomes.
 
@@ -139,18 +206,73 @@ This supports the alternative hypothesis (H1) and suggests that junctions play a
 
 -   This is an initial model, with further testing a more tuned model or different classifier will provide more accurate predictions.
 
-## Ethical considerations
+## Deployment
 
-There were no ethical considerations required. All the data in this dataset was anonymised, no personal details have been included.
+[Power BI dashboards can be found here](/dashboards/)
 
 ## Dashboard Design
 
--   List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
--   Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
--   How were data insights communicated to technical and non-technical audiences?
--   Explain how the dashboard was designed to communicate complex data insights to different audiences.
+### Michael's
 
-## Conclusions
+US Car Accidents
+The single-page dashboard integrates multiple interactive and analytical components:
+
+Filters and Controls
+Year, Month, Day, Time Checkboxes: Selectable filters for years 2016-2023
+Search Bar: Natural language query input with suggestions
+
+Data Visualisations and Widgets
+
+#### Weather vs Accident Count Table:
+
+Rows: Weather conditions (Cloudy, Clear)
+Columns: Precise Monthly accident counts
+Widget Type: Interactive table with sorting and filtering
+
+#### Operating Severity Influences
+
+Widget Type: Key influencers visual
+Insight: “Clear” weather increases average severity by 0.21
+Purpose: Highlights statistically significant factors affecting accident severity
+
+#### Accident Severity Per State Map
+
+Widget Type: Interactive map with scalable blue circular markers
+Data Source: OSM and TomTom via Microsoft Azure
+Function: Visuals severity distribution geographically
+
+Communicating Insights
+Search Bar with Query Suggestions: Enables SQL-like or natural language queries for deeper data exploration.
+
+Key Influencers Analysis: Uses statistical modelling to show causal relationships.
+
+Detailed Monthly Breakdown Table: Offers granular data for time-series analysis and modelling.
+
+Interactive Map: Visually intuitive representation of severity by state.
+Checkbox Filters: Simple UI for narrowing down data by time period.
+Weather Condition Table: Uses plain language and colour-coded cells to highlight trends.
+
+## Main Data Analysis Libraries
+
+### 📦 Project Dependencies
+
+| Category             | Library                     | Purpose                                                     |
+| :------------------- | :-------------------------- | :---------------------------------------------------------- |
+| **Data Handling**    | `pandas`                    | Data cleaning, manipulation, and structural analysis.       |
+|                      | `numpy`                     | Numerical operations and array handling.                    |
+| **Visualisation**    | `seaborn`                   | Statistical data plotting and heatmaps.                     |
+|                      | `matplotlib`                | Core plotting engine for custom static charts.              |
+|                      | `plotly`                    | Interactive charts and geospatial Mapbox visualisations.    |
+|                      | `wordcloud`                 | Text analysis for accident descriptions.                    |
+| **Preprocessing**    | `sklearn.preprocessing`     | Feature scaling and categorical encoding (OneHot/Label).    |
+|                      | `sklearn.compose`           | Managing transformations across different column types.     |
+| **Machine Learning** | `sklearn.model_selection`   | Data splitting and cross-validation.                        |
+|                      | `sklearn.tree`              | Decision Tree classifier implementation.                    |
+|                      | `sklearn.feature_selection` | Identifying key variables affecting accident severity.      |
+|                      | `sklearn.pipeline`          | Building reproducible end-to-end ML workflows.              |
+|                      | `sklearn.metrics`           | Performance metrics (Accuracy, F1-Score, Confusion Matrix). |
+
+## Conclusion and discussion
 
 #### Machine Learning Model
 
@@ -173,6 +295,8 @@ Confusion matrix:
 
 -   Most misclassified samples of class 3 and 4 are predicted as class 2.
 
+## Limitations in the data
+
 ## Unfixed Bugs
 
 There were no bugs encountered throughout this project
@@ -185,24 +309,9 @@ There were no bugs encountered throughout this project
 With the Decision Tree ML model different hyperparameters have been tested. Next it could prove beneficial to try a Random Forest Classifier to improve the accuracy score. The severity target variable is imbalanced which is making it hard for the model to predict accurately for targets other than a severity of 2.
 To delve deeper into the data the three different twilight columns could be investigated to see if the reducing light levels has a noticeable effect on traffic accidents.
 
-## Deployment
+## Ethical considerations
 
-### Heroku
-
--   The App live link is: https://YOUR_APP_NAME.herokuapp.com/
--   Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
--   The project was deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
-
-## Main Data Analysis Libraries
-
--   Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+There were no ethical considerations required. All the data in this dataset was anonymised, no personal details have been included.
 
 ## Credits
 
@@ -218,17 +327,6 @@ Provenance: “This dataset was collected in real-time using multiple Traffic AP
 
 -   In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
 -   You can break the credits section up into Content and Media, depending on what you have included in your project.
-
-### Content
-
--   The text for the Home page was taken from Wikipedia Article A
--   Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
--   The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
--   The photos used on the home and sign-up page are from This Open-Source site
--   The images used for the gallery page were taken from this other open-source site
 
 ## Acknowledgements (optional)
 

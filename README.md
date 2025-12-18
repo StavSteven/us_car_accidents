@@ -131,8 +131,6 @@ This supports the alternative hypothesis (H1) and suggests that junctions play a
 
 #### The machine learning model
 
-#### The machine learning model
-
 -   Why a decision tree classifier for the machine learning model? The target variable to be predicted is one of four outputs and therefore a classification model is appropriate. A decision tree was chosen because it is easy to interpret the outputs and it can handle both numerical and categorical features. A decision tree is suitable for identifying the most influential variables in predicting adoption outcomes.
 
 -   The data was encoded, ready for the ML model using the straightforward OneHotEncoder.
@@ -143,8 +141,7 @@ This supports the alternative hypothesis (H1) and suggests that junctions play a
 
 ## Ethical considerations
 
--   Were there any data privacy, bias or fairness issues with the data?
--   How did you overcome any legal or societal issues?
+There were no ethical considerations required. All the data in this dataset was anonymised, no personal details have been included.
 
 ## Dashboard Design
 
@@ -178,9 +175,7 @@ Confusion matrix:
 
 ## Unfixed Bugs
 
--   Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
--   Did you recognise gaps in your knowledge, and how did you address them?
--   If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+There were no bugs encountered throughout this project
 
 ## Development Roadmap
 

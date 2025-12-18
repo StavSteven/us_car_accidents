@@ -65,9 +65,13 @@ We reject the Null Hypothesis. There is a significant relationship between time 
 ## Analysis techniques used
 
 -   List the data analysis methods used and explain limitations or alternative approaches.
--   How did you structure the data analysis techniques. Justify your response.
--   Did the data limit you, and did you use an alternative approach to meet these challenges?
+-   How didand did you use an alternative approach to meet these challenges?
 -   How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+
+*   Utilise CRISP-DM: Cross Industry Standard Process for Data Mining
+*   Utilise the Agile approach: small iterations with constant evaluation. For example: simplifying the number of weather conditions and then working with a new version of the data.
+
+#### The machine learning model
 
 #### The machine learning model
 
@@ -124,6 +128,9 @@ Confusion matrix:
 
 -   What challenges did you face, and what strategies were used to overcome these challenges?
 -   What new skills or tools do you plan to learn next based on your project experience?
+
+With the Decision Tree ML model different hyperparameters have been tested. Next it could prove beneficial to try a Random Forest Classifier to improve the accuracy score. The severity target variable is imbalanced which is making it hard for the model to predict accurately for targets other than a severity of 2.
+To delve deeper into the data the three different twilight columns could be investigated to see if the reducing light levels has a noticeable effect on traffic accidents.
 
 ## Deployment
 

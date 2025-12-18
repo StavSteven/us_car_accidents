@@ -167,8 +167,6 @@ Data visualisation was performed using Power BI to clearly communicate insights.
 
 ## Rationale to map the business requirements
 
-### Project Methodology and Execution
-
 The analysis followed a the best practice that we have learnt throughout the course. By examining the dataset of over 4,800 US traffic accidents, the initial stage focused on understanding the distribution of crash severity and identifying critical environmental and infrastructure variables. Data management was central to the process; raw data was cleaned and transformed using Pandas to ensure that temporal features—such as peak hours and seasonal months—were accurately extracted. Categorical variables and boolean flags for road features were encoded to facilitate both statistical correlation and machine learning compatibility, ensuring a high level of data integrity from collection through to interpretation.
 
 The research methodology was designed to provide a multi-dimensional view of road safety. Quantitative analysis was employed to pinpoint how fluctuations in visibility, precipitation, and temperature correlate with accident frequency. This was complemented by a comparative infrastructure study, which isolated the impact of junctions and traffic signals on the resulting severity of a crash. To provide actionable insights for stakeholders, the project utilised supervised machine learning—specifically Decision Tree Classifiers—to rank feature importance. This "white-box" approach was chosen to ensure the findings remained transparent and interpretable for local councils and urban planners. Finally, geospatial mapping was integrated into the workflow to identify physical "black spots," transforming tabular data into a visual narrative that highlights high-risk locations across the United States.
@@ -189,22 +187,11 @@ The project utilised multiple visualisation strategies:
 
 ## Analysis techniques used
 
--   List the data analysis methods used and explain limitations or alternative approaches.
--   How did you use an alternative approach to meet these challenges?
--   How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+The analysis was structured around the CRISP-DM (Cross Industry Standard Process for Data Mining) framework, ensuring a systematic transition from business understanding to data preparation and modelling. We started the analysis by inspecting, cleaning and transforming it. Once the dataset was loaded, an initial assessment revealed that there were ~7.7 million records. This was far too many for our project and was also over the github data limit. We opted to take a sample of 5000 records from the original set, this would be enough to work with even taking into account the fact that we may lose some records in the cleaning phase. We handled missing values and performed data type conversions, extracting day, month, year from the date/time to allow for better analysis and visualisation. Boolean road features such as junction, crossing and traffic_signal were kept as they were, while environmental metrics like temperature and visibility were checked for outliers. This stage was critical in transforming the raw data into a structured format suitable for high-fidelity statistical exploration. Throughout this preparation phase, we utilised an Agile approach, favouring small iterations with constant evaluation to refine our variables. For example, we initially found the weather_condition column too fragmented to provide clear insights; so we chose to simplify it into 5 categorical values from the original 44.
 
-*   Utilise CRISP-DM: Cross Industry Standard Process for Data Mining
-*   Utilise the Agile approach: small iterations with constant evaluation. For example: simplifying the number of weather conditions and then working with a new version of the data.
+Following the preparation of the data, we transitioned into machine learning and predictive modelling. Using Scikit-Learn, we developed a pipeline that integrated feature scaling and categorical encoding. The data was scaled using the StandardScaler to ensure that all features were on a comparable scale, which prevents features with larger numerical ranges from dominating the training process. A decision tree classifier was implemented to investigate the drivers of crash severity. A decision tree classifier was chosen for its transparency, easy to interpret the outputs and it can handle both numerical and categorical features. A decision tree is suitable for identifying the most influential variables in predicting adoption outcomes. By splitting the data into training and testing sets, we were able to validate the model's performance through accuracy scores and confusion matrices, ensuring the insights were statistically sound before moving to the visualisation stage. his is an initial model, with further testing a more tuned model or different classifier will provide more accurate predictions.
 
-### The machine learning model
-
--   Why a decision tree classifier for the machine learning model? The target variable to be predicted is one of four outputs and therefore a classification model is appropriate. A decision tree was chosen because it is easy to interpret the outputs and it can handle both numerical and categorical features. A decision tree is suitable for identifying the most influential variables in predicting adoption outcomes.
-
--   The data was encoded, ready for the ML model using the straightforward OneHotEncoder.
-
--   The data was scaled using the StandardScaler to ensure that all features were on a comparable scale, which prevents features with larger numerical ranges from dominating the training process.
-
--   This is an initial model, with further testing a more tuned model or different classifier will provide more accurate predictions.
+The final phase of the project focused on data visualisation using a multi-library approach to communicate findings to different stakeholders. Seaborn and Matplotlib were utilised for statistical plots, such as correlation heatmaps and distribution charts, which quantified the relationship between weather conditions and accident severity. To provide a more intuitive experience for local councils, we used Plotly to create interactive charts. Thanks to power BI we were also able to make a couple of intervative dashboards where we mapped accident coordinates across the United States, allowing for a dynamic exploration of accident "hotspots." This combination of static statistical evidence and interactive mapping ensures that the results are both scientifically rigorous and accessible for urban planning decisions.
 
 ## Deployment
 
@@ -251,6 +238,52 @@ Detailed Monthly Breakdown Table: Offers granular data for time-series analysis 
 Interactive Map: Visually intuitive representation of severity by state.
 Checkbox Filters: Simple UI for narrowing down data by time period.
 Weather Condition Table: Uses plain language and colour-coded cells to highlight trends.
+
+### Hidaia's
+
+### Dashboard Pages and Content
+
+The project dashboard includes multiple visual components created by the team to analyse accident severity from different perspectives. These include:
+
+**Accident Severity Distribution**
+Visuals showing the overall distribution of accident severity levels.
+
+**Severity by Junction Presence**
+Bar charts comparing average accident severity at junctions versus non-junction locations.
+
+**Time-Based Analysis**
+Visuals showing accident counts by hour of the day.
+Comparisons between day and night accidents.
+
+**Weather and Time Interaction**
+Charts illustrating how accident frequency varies by weather conditions and time of day.
+
+**Geographical and Influencer Analysis (Dashboard)**
+
+-   Interactive Power BI dashboard including:
+-   Filters for year and time
+-   Tables summarising accident metrics
+-   Key influencer visuals
+-   Map showing accident severity by state
+
+**Dashboard Planning and Iteration**
+The dashboard design evolved during the project. Initial plans focused on basic charts, but were later refined to include interactive elements such as filters, maps, and key influencer visuals. These changes were made to improve clarity and allow deeper exploration of the data as new insights emerged.
+
+---
+
+**Communication of Data Insights**
+For non-technical audiences, insights were communicated using clear visuals, summaries, and interactive dashboards without requiring statistical knowledge.
+For technical audiences, detailed charts, statistical results, and breakdowns by variables such as time, weather, and junction presence were provided to support deeper analysis.
+
+---
+
+**Dashboard Design for Different Audiences**
+The dashboard was designed to simplify complex accident data by using:
+Clear titles and labels
+Visual comparisons instead of raw tables
+Interactive filters to customise views
+
+This approach ensures accessibility for non-technical users while still supporting detailed analysis for technical users.
 
 ## Main Data Analysis Libraries
 

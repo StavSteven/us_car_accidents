@@ -73,8 +73,6 @@ We reject the Null Hypothesis. There is a significant relationship between time 
 
 #### The machine learning model
 
-#### The machine learning model
-
 -   Why a decision tree classifier for the machine learning model? The target variable to be predicted is one of four outputs and therefore a classification model is appropriate. A decision tree was chosen because it is easy to interpret the outputs and it can handle both numerical and categorical features. A decision tree is suitable for identifying the most influential variables in predicting adoption outcomes.
 
 -   The data was encoded, ready for the ML model using the straightforward OneHotEncoder.

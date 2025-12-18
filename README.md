@@ -82,6 +82,9 @@ _This will be tested using:_ A chi-squared test to understand the statistical an
 **Result:**
 We reject the Null Hypothesis. There is a significant relationship between time of day and severity. The chi-squared test supports this return a pval of 0.0001210779, well below the 0.05 threshold. The visual plots also support this, whilst there are more crashes during the day and the majority of accidents are given a severity rating of two the largest change in percentage between day and night is category 4 crashes increasing by 106%.
 
+![Severity by hour](/images/severity_by_hour_plotly.png)
+![Heatmap](/images/time_day_severity_chi_squared.png)
+
 **Hypothesis 2:** Accident severity changes depending on whether an accident occurs at a junction.
 
 -   **Null Hypothesis (H0):**  
@@ -189,6 +192,8 @@ The project utilised multiple visualisation strategies:
 3. **Machine Learning:** We were able to create a model which was able to judge the severity of potential crashes based on weather conditions and road infrastructure.
 4. **Textual (WordCloud):** Employed to analyse accident descriptions for recurring human factors or situational themes.
 
+![Example of visualisation - Severity by month](/images/severity_by_month_temp.png)
+
 ## Analysis techniques used
 
 The analysis was structured around the CRISP-DM (Cross Industry Standard Process for Data Mining) framework, ensuring a systematic transition from business understanding to data preparation and modelling. We started the analysis by inspecting, cleaning and transforming it. Once the dataset was loaded, an initial assessment revealed that there were ~7.7 million records. This was far too many for our project and was also over the github data limit. We opted to take a sample of 5000 records from the original set, this would be enough to work with even taking into account the fact that we may lose some records in the cleaning phase. We handled missing values and performed data type conversions, extracting day, month, year from the date/time to allow for better analysis and visualisation. Boolean road features such as junction, crossing and traffic_signal were kept as they were, while environmental metrics like temperature and visibility were checked for outliers. This stage was critical in transforming the raw data into a structured format suitable for high-fidelity statistical exploration. Throughout this preparation phase, we utilised an Agile approach, favouring small iterations with constant evaluation to refine our variables. For example, we initially found the weather_condition column too fragmented to provide clear insights; so we chose to simplify it into 5 categorical values from the original 44.
@@ -206,7 +211,6 @@ The final phase of the project focused on data visualisation using a multi-libra
 ### Michael's
 
 <img src ="images/michael_dashboard.png" alt="Michael Dashboard" style="width: 400; height: auto">
-
 
 US Car Accidents
 
@@ -297,7 +301,7 @@ This approach ensures accessibility for non-technical users while still supporti
 
 ## Main Data Analysis Libraries
 
-### 📦 Project Dependencies
+### Project Dependencies
 
 | Category             | Library                     | Purpose                                                     |
 | :------------------- | :-------------------------- | :---------------------------------------------------------- |

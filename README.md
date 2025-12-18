@@ -83,8 +83,7 @@ We reject the Null Hypothesis. There is a significant relationship between time 
 
 ## Ethical considerations
 
--   Were there any data privacy, bias or fairness issues with the data?
--   How did you overcome any legal or societal issues?
+There were no ethical considerations required. All the data in this dataset was anonymised, no personal details have been included.
 
 ## Dashboard Design
 

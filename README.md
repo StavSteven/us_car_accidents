@@ -38,7 +38,8 @@ This project explores a dataset of traffic accidents to identify the primary fac
 
 ## Business Requirements
 
--   Describe your business requirements
+As a local council in America we want to study crash data across the country to determine which road features (junctions, crossings, or signals) are most frequently associated with high-severity crashes. As well as studying the time of day, or year when crashes are taking place to see whether we can put in any preventative measures.
+Are accidents happening more at night? Are accidents around crossings more frequent than those not near crossings? Does bad weather cause the increase in number of severity of crashes that we think it does?
 
 ## Hypothesis and how to validate?
 

@@ -239,6 +239,52 @@ Interactive Map: Visually intuitive representation of severity by state.
 Checkbox Filters: Simple UI for narrowing down data by time period.
 Weather Condition Table: Uses plain language and colour-coded cells to highlight trends.
 
+### Hidaia's
+
+### Dashboard Pages and Content
+
+The project dashboard includes multiple visual components created by the team to analyse accident severity from different perspectives. These include:
+
+**Accident Severity Distribution**
+Visuals showing the overall distribution of accident severity levels.
+
+**Severity by Junction Presence**
+Bar charts comparing average accident severity at junctions versus non-junction locations.
+
+**Time-Based Analysis**
+Visuals showing accident counts by hour of the day.
+Comparisons between day and night accidents.
+
+**Weather and Time Interaction**
+Charts illustrating how accident frequency varies by weather conditions and time of day.
+
+**Geographical and Influencer Analysis (Dashboard)**
+
+-   Interactive Power BI dashboard including:
+-   Filters for year and time
+-   Tables summarising accident metrics
+-   Key influencer visuals
+-   Map showing accident severity by state
+
+**Dashboard Planning and Iteration**
+The dashboard design evolved during the project. Initial plans focused on basic charts, but were later refined to include interactive elements such as filters, maps, and key influencer visuals. These changes were made to improve clarity and allow deeper exploration of the data as new insights emerged.
+
+---
+
+**Communication of Data Insights**
+For non-technical audiences, insights were communicated using clear visuals, summaries, and interactive dashboards without requiring statistical knowledge.
+For technical audiences, detailed charts, statistical results, and breakdowns by variables such as time, weather, and junction presence were provided to support deeper analysis.
+
+---
+
+**Dashboard Design for Different Audiences**
+The dashboard was designed to simplify complex accident data by using:
+Clear titles and labels
+Visual comparisons instead of raw tables
+Interactive filters to customise views
+
+This approach ensures accessibility for non-technical users while still supporting detailed analysis for technical users.
+
 ## Main Data Analysis Libraries
 
 ### 📦 Project Dependencies

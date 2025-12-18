@@ -119,28 +119,50 @@ This supports the alternative hypothesis (H1) and suggests that junctions play a
 
 ## Project Plan
 
-### Steps taken to analyse the data:
+High-Level Steps,
+The dataset was collected from Kaggle and reviewed to understand its structure and variables.,
+Data cleaning and preparation were performed, including handling missing values and creating day and night categories.
+Exploratory Data Analysis (EDA) was conducted to identify patterns in accident severity.,
+Hypotheses were tested using statistical methods (chi-squared test).,
+Results were interpreted to generate insights and recommendations.,
 
-Data inspection: We loaded the dataset and performed an initial df.info() to see the properties of the data, column names, dtypes and identify missing values. df.describe()allowed us to check for any outliers and check the distribution of the data.
+Data Management,
+Data was sourced from Kaggle and managed in a structured manner throughout the project.,
+Cleaning and processing ensured data consistency and accuracy.,
+Data was grouped and analysed based on key variables such as time of day and junction presence.,
+Visualisations were used to support interpretation and present findings clearly.,
 
-Feature Engineering & Cleaning: We removed the columns we deemed unusable or not required to tell our story. We also transformed some of the columns, extracting day, month and year from already existing columns to give us extra data to use when visualising it. We also mapped and categorised weather into a smaller number of groups for better statistical analysis. When dealing with nulls we looked at the distribution of data within that field to decide whether it was best to fill the value with the mean (normal distribution) or median (non-normal distribution). There were roughly 200 categorical nulls so we opted to remove those records altogether as 4800 was enough data to carry out the project.
-
-Exploratory Data Analysis (EDA): We used Seaborn, Matplotlib and Plotly to create visualisations that allowed us to identify correlations between environmental factors, date time and accident frequency. Due to the nature of the nature we were also able to use the latitude and longitude to plot where the accident took place.
-
-Predictive Modelling: We were able to build a machine learning pipeline using a decision tree classifier to determine the "feature importance" of various factors when it came to predicting accident severity
-
-### Managing the data
-
-The original dataset had ~7.7million records, not only was this more than we needed it exceeded Githubs limit. It was decided that we would take a random sample of 5000 records to work with. For the machine learning parts of our project all numerical data was scaled and categoricals encoded to maintain the integrity of the data but allow us to plot it all. We tried to use a variety of methods to visualise the data, using a number of different libraries and different charts on our dashboards and within our notebooks.
+Research Methodologies,
+Exploratory Data Analysis (EDA) was used to understand patterns in the data.,
+Statistical analysis (chi-squared test) was applied to validate the hypotheses.,
+Data visualisation was performed using Power BI to clearly communicate insights.
 
 ## The rationale to map the business requirements to the Data Visualisations
 
--   List your business requirements and a rationale to map them to the Data Visualisations
+### Project Methodology and Execution
+
+The analysis followed a the best practice that we have learnt throughout the course. By examining the dataset of over 4,800 US traffic accidents, the initial stage focused on understanding the distribution of crash severity and identifying critical environmental and infrastructure variables. Data management was central to the process; raw data was cleaned and transformed using Pandas to ensure that temporal features—such as peak hours and seasonal months—were accurately extracted. Categorical variables and boolean flags for road features were encoded to facilitate both statistical correlation and machine learning compatibility, ensuring a high level of data integrity from collection through to interpretation.
+
+The research methodology was designed to provide a multi-dimensional view of road safety. Quantitative analysis was employed to pinpoint how fluctuations in visibility, precipitation, and temperature correlate with accident frequency. This was complemented by a comparative infrastructure study, which isolated the impact of junctions and traffic signals on the resulting severity of a crash. To provide actionable insights for stakeholders, the project utilised supervised machine learning—specifically Decision Tree Classifiers—to rank feature importance. This "white-box" approach was chosen to ensure the findings remained transparent and interpretable for local councils and urban planners. Finally, geospatial mapping was integrated into the workflow to identify physical "black spots," transforming tabular data into a visual narrative that highlights high-risk locations across the United States.
+
+To ensure the analysis provided actionable value, the following requirements were established to map data insights to real-world local council applications:
+
+-   **Infrastructure Safety:** Identifying high-risk road features to prioritised engineering audits.
+-   **Environmental Policy:** Determining visibility and precipitation thresholds for dynamic speed limit warnings.
+
+### Data Visualisation Strategy
+
+The project utilised multiple visualisation strategies:
+
+1. **Statistical (Seaborn/Matplotlib):** Used to identify correlations between environmental factors and crash severity.
+2. **Interactive (Plotly and Power BI dashboards):** Implemented to allow stakeholders to explore geographic "black spots" across the United States.
+3. **Machine Learning:** We were able to create a model which was able to judge the severity of potential crashes based on weather conditions and road infrastructure.
+4. **Textual (WordCloud):** Employed to analyse accident descriptions for recurring human factors or situational themes.
 
 ## Analysis techniques used
 
 -   List the data analysis methods used and explain limitations or alternative approaches.
--   How didand did you use an alternative approach to meet these challenges?
+-   How did you use an alternative approach to meet these challenges?
 -   How did you use generative AI tools to help with ideation, design thinking and code optimisation?
 
 *   Utilise CRISP-DM: Cross Industry Standard Process for Data Mining
